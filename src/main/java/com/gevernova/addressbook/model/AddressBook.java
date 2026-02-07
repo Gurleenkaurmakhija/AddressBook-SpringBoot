@@ -1,23 +1,23 @@
 package com.gevernova.addressbook.model;
 
-// model class
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class AddressBook {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String name;
     private String phone;
     private String city;
 
     // default constructor
     public AddressBook() {}
-
-    // parameterized constructor
-    public AddressBook(int id, String name, String phone, String city) {
-        this.id = id;
-        this.name = name;
-        this.phone = phone;
-        this.city = city;
-    }
 
     // getters and setters
     public int getId() { return id; }
@@ -31,4 +31,5 @@ public class AddressBook {
 
     public String getCity() { return city; }
     public void setCity(String city) { this.city = city; }
+
 }
