@@ -1,7 +1,5 @@
 package com.gevernova.addressbook.dto;
 
-package com.gevernova.addressbook.dto;
-
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 
